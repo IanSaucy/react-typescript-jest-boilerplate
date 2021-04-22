@@ -33,3 +33,18 @@ jobs:
       - name: Run Unit Tests
         run: npm run test
       
+      - name: Run eslint on Code
+        run: npm run lint:code
+        
+      - name: Run eslint on SCSS
+        run: npm run lint:code
+      
+      # Code Coverage 
+      - name: Code Coverage Test
+        run: npm run test:coverage 
+      - name: Upload to CodeCov.io
+        uses: codecov/codecov-actions@v1
+        with:
+          token: $${{secrect.CODECOV_TOKEN}}
+        
+        
