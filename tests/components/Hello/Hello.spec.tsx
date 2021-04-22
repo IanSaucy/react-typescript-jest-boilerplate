@@ -19,3 +19,8 @@ describe('Hello component', () => {
     expect(tree).toMatchSnapshot();
   });
 });
+
+describe('Bad Equals Test', () => {
+  const val1 = 1;
+  expect(val1).toEqual(2);
+});
